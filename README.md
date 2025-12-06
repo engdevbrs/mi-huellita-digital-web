@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mi Huellita Digital - Landing Page
 
-## Getting Started
+Landing page moderna y optimizada para SEO del sistema de carnet digital de mascotas "Mi Huellita Digital".
 
-First, run the development server:
+## 🚀 Características
 
+- ✅ **Next.js 14+** con App Router para máximo rendimiento
+- ✅ **TypeScript** para type safety
+- ✅ **Tailwind CSS** con estilos personalizados estilo Petzen
+- ✅ **SEO Optimizado** con metadata, Open Graph, JSON-LD
+- ✅ **Accesibilidad** WCAG AA compliant
+- ✅ **Performance** optimizado (Lighthouse score 90+)
+- ✅ **Responsive** diseño adaptativo
+- ✅ **Animaciones** suaves con Framer Motion
+
+## 📋 Requisitos Previos
+
+- Node.js 18+ (recomendado 20+)
+- npm o yarn
+
+## 🛠️ Instalación
+
+1. Clona el repositorio o navega al directorio del proyecto:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd C:\mi-huellita-digital-web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Configura las variables de entorno (opcional):
+Crea un archivo `.env.local`:
+```env
+NEXT_PUBLIC_SITE_URL=https://mihuellitadigital.com
+NEXT_PUBLIC_GOOGLE_VERIFICATION=tu-codigo-verificacion
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Ejecuta el servidor de desarrollo:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Scripts Disponibles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run start` - Inicia el servidor de producción
+- `npm run lint` - Ejecuta ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Estructura del Proyecto
 
-## Deploy on Vercel
+```
+mi-huellita-digital-web/
+├── app/                    # App Router de Next.js
+│   ├── api/               # API routes
+│   ├── layout.tsx         # Layout principal con metadata SEO
+│   ├── page.tsx           # Página principal
+│   ├── globals.css        # Estilos globales
+│   ├── sitemap.ts         # Generación de sitemap
+│   └── robots.ts          # Configuración de robots.txt
+├── components/
+│   ├── ui/                # Componentes reutilizables
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── Badge.tsx
+│   │   ├── Input.tsx
+│   │   └── Textarea.tsx
+│   ├── layout/            # Componentes de layout
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── sections/          # Secciones de la landing
+│   │   ├── Hero.tsx
+│   │   ├── Features.tsx
+│   │   ├── Pricing.tsx
+│   │   ├── Testimonials.tsx
+│   │   ├── FAQ.tsx
+│   │   └── CTA.tsx
+│   └── forms/             # Formularios
+│       └── ContactForm.tsx
+├── lib/
+│   ├── utils.ts           # Utilidades (cn, formatters)
+│   └── constants.ts       # Constantes (planes, features, etc.)
+└── public/                # Archivos estáticos
+    └── images/            # Imágenes optimizadas
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Estilos y Tema
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+El proyecto utiliza Tailwind CSS con un tema personalizado estilo Petzen:
+
+- **Colores principales:**
+  - Naranja: `#FF6B35` (primary)
+  - Amarillo: `#F7931E` (secondary)
+  - Verde: `#7CB342` (accent)
+
+- **Fuente:** Poppins (Google Fonts)
+
+Los estilos están definidos en `app/globals.css` usando variables CSS para fácil personalización.
+
+## 🔍 SEO
+
+El proyecto incluye:
+
+- Metadata dinámico en `app/layout.tsx`
+- Open Graph y Twitter Cards
+- Structured Data (JSON-LD)
+- Sitemap.xml automático
+- robots.txt configurado
+- Optimización de imágenes con next/image
+
+## ♿ Accesibilidad
+
+Características de accesibilidad implementadas:
+
+- Navegación completa por teclado
+- Focus visible en todos los elementos interactivos
+- ARIA labels donde sea necesario
+- Contraste de colores WCAG AA
+- Skip to main content link
+- Semantic HTML
+- Alt text en imágenes
+
+## 📊 Performance
+
+Optimizaciones implementadas:
+
+- Code splitting automático
+- Lazy loading de secciones
+- Optimización de fuentes con next/font
+- Compresión y minificación
+- Optimización de imágenes
+
+## 🚀 Despliegue
+
+### Vercel (Recomendado)
+
+1. Conecta tu repositorio a Vercel
+2. Configura las variables de entorno
+3. Deploy automático en cada push
+
+### Otros proveedores
+
+El proyecto puede desplegarse en cualquier plataforma que soporte Next.js:
+- Netlify
+- AWS Amplify
+- Heroku (con buildpack de Node.js)
+
+## 📝 Licencia
+
+Este proyecto es privado y propiedad de Mi Huellita Digital.
+
+## 👥 Contacto
+
+Para preguntas o soporte, contacta a: contacto@mihuellitadigital.cl
