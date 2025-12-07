@@ -76,12 +76,12 @@ export const ContactForm = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[#FF69B4] text-sm font-semibold uppercase tracking-wide mb-2 block">
+          <span className="text-primary text-sm font-semibold uppercase tracking-wide mb-2 block">
             Contáctanos
           </span>
           <h2
             id="contact-heading"
-            className="text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4 section-title inline-block"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 section-title inline-block"
           >
             Ponte en Contacto
           </h2>
@@ -100,7 +100,7 @@ export const ContactForm = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card variant="default" className="bg-[#FF69B4] text-white">
+              <Card variant="default" className="bg-primary text-white">
                 <h3 className="text-xl font-bold mb-4">¡Escríbenos! Agenda una cita</h3>
                 <form onSubmit={handleSubmit(onSubmit)} noValidate>
                   <div className="space-y-4">
@@ -111,7 +111,8 @@ export const ContactForm = () => {
                       required
                       autoComplete="name"
                       aria-required="true"
-                      className="bg-white text-[#1a1a2e]"
+                      placeholder="Ingresa tu nombre completo"
+                      className="bg-white text-gray-900"
                     />
 
                     <Input
@@ -122,7 +123,8 @@ export const ContactForm = () => {
                       required
                       autoComplete="email"
                       aria-required="true"
-                      className="bg-white text-[#1a1a2e]"
+                      placeholder="tu@email.com"
+                      className="bg-white text-gray-900"
                     />
 
                     <Input
@@ -131,7 +133,8 @@ export const ContactForm = () => {
                       error={errors.subject?.message}
                       required
                       aria-required="true"
-                      className="bg-white text-[#1a1a2e]"
+                      placeholder="¿Sobre qué quieres contactarnos?"
+                      className="bg-white text-gray-900"
                     />
 
                     <Textarea
@@ -141,7 +144,8 @@ export const ContactForm = () => {
                       required
                       rows={4}
                       aria-required="true"
-                      className="bg-white text-[#1a1a2e]"
+                      placeholder="Escribe tu mensaje aquí..."
+                      className="bg-white text-gray-900"
                     />
 
                     {submitStatus === "success" && (
@@ -173,7 +177,7 @@ export const ContactForm = () => {
                       variant="secondary"
                       size="lg"
                       isLoading={isSubmitting}
-                      className="w-full bg-[#FFD700] hover:bg-[#FFC700]"
+                      className="w-full bg-warning hover:bg-warning-dark"
                     >
                       {!isSubmitting && (
                         <>
@@ -197,7 +201,7 @@ export const ContactForm = () => {
             className="space-y-6"
           >
             <div>
-              <h3 className="text-2xl font-bold text-[#1a1a2e] mb-4">Ponte en Contacto</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ponte en Contacto</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Ofrecemos servicios rápidos y fáciles para perros y gatos de diversas razas. 
                 Sin importar su tamaño o edad, podemos brindar una experiencia positiva.
@@ -206,11 +210,11 @@ export const ContactForm = () => {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#FF69B4] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#1a1a2e] mb-1">Dirección</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">Dirección</h4>
                   <p className="text-gray-600 text-sm">
                     Santiago, Chile
                   </p>
@@ -218,11 +222,11 @@ export const ContactForm = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#FF69B4] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#1a1a2e] mb-1">Teléfono</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">Teléfono</h4>
                   <p className="text-gray-600 text-sm">
                     +56 9 1234 5678
                   </p>
@@ -230,11 +234,11 @@ export const ContactForm = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#FF69B4] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#1a1a2e] mb-1">Email</h4>
+                  <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
                   <p className="text-gray-600 text-sm">
                     contacto@mihuellitadigital.cl
                   </p>

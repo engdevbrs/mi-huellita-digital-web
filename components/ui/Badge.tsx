@@ -12,11 +12,11 @@ export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
       "inline-flex items-center px-4 py-2 rounded-full font-medium text-sm";
 
     const variants = {
-      default: "bg-[#FFB6C1] text-[#FF1493]",
-      orange: "bg-[#FFB6C1] text-[#FF1493]",
-      green: "bg-[#dcfce7] text-[#166534]",
-      yellow: "bg-[#fef3c7] text-[#92400e]",
-      pink: "bg-[#FFB6C1] text-[#FF1493]",
+      default: "bg-blue-100 text-primary-dark",
+      orange: "bg-orange-100 text-warning",
+      green: "bg-green-100 text-secondary",
+      yellow: "bg-yellow-100 text-warning",
+      pink: "bg-blue-100 text-primary-dark",
     };
 
     return (

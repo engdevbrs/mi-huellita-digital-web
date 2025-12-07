@@ -29,12 +29,12 @@ export const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[#FF69B4] text-sm font-semibold uppercase tracking-wide mb-2 block">
+          <span className="text-primary text-sm font-semibold uppercase tracking-wide mb-2 block">
             Nuestros Servicios
           </span>
           <h2
             id="features-heading"
-            className="text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4 section-title inline-block"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 section-title inline-block"
           >
             Todo lo que necesitas
           </h2>
@@ -58,9 +58,9 @@ export const Features = () => {
                 <Card variant="feature" className="text-center h-full">
                   {/* Icono */}
                   <div className="mb-6 flex justify-center">
-                    <Icon className="h-12 w-12 text-[#FF69B4]" aria-hidden="true" />
+                    <Icon className="h-12 w-12 text-primary" aria-hidden="true" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1a1a2e] mb-3">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     {feature.description}
                   </p>
@@ -72,7 +72,7 @@ export const Features = () => {
 
         {/* Pagination dots */}
         <div className="flex justify-center gap-2 mt-12">
-          <div className="w-3 h-3 rounded-full bg-[#1a1a2e]"></div>
+          <div className="w-3 h-3 rounded-full bg-gray-900"></div>
           <div className="w-3 h-3 rounded-full border-2 border-gray-300"></div>
           <div className="w-3 h-3 rounded-full border-2 border-gray-300"></div>
           <div className="w-3 h-3 rounded-full border-2 border-gray-300"></div>

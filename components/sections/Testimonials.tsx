@@ -35,7 +35,7 @@ export const Testimonials = () => {
         >
           <h2
             id="testimonials-heading"
-            className="text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4 section-title inline-block"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 section-title inline-block"
           >
             Lo que dicen nuestros usuarios
           </h2>
@@ -63,7 +63,7 @@ export const Testimonials = () => {
                     {[...Array(TESTIMONIALS[currentIndex].rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="h-5 w-5 fill-[#FFD700] text-[#FFD700]"
+                        className="h-5 w-5 fill-warning text-warning"
                         aria-hidden="true"
                       />
                     ))}
@@ -76,7 +76,7 @@ export const Testimonials = () => {
                       <span className="text-xl">👤</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-[#1a1a2e]">
+                      <p className="font-semibold text-gray-900">
                         {TESTIMONIALS[currentIndex].name}
                       </p>
                       <p className="text-sm text-gray-600">
@@ -106,7 +106,7 @@ export const Testimonials = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`h-2 rounded-full transition-all ${
                     index === currentIndex
-                      ? "w-8 bg-[#FF69B4]"
+                      ? "w-8 bg-primary"
                       : "w-2 bg-gray-300"
                   }`}
                   aria-label={`Ir al testimonio ${index + 1}`}

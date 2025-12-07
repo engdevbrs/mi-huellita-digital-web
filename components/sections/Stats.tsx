@@ -64,7 +64,7 @@ export const Stats = () => {
                 className="text-center"
               >
                 <div className="flex justify-center mb-3">
-                  <Icon className="h-10 w-10 md:h-12 md:w-12 text-[#FF69B4] stroke-[2.5]" aria-hidden="true" />
+                  <Icon className="h-10 w-10 md:h-12 md:w-12 text-primary stroke-[2.5]" aria-hidden="true" />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.number}

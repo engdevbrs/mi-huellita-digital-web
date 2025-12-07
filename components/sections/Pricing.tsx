@@ -58,14 +58,14 @@ export const Pricing = () => {
         >
           <h2
             id="pricing-heading"
-            className="text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4 section-title inline-block"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 section-title inline-block"
           >
             Planes que se adaptan a ti
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-8">
             Desde una mascota hasta criaderos. Elige el plan perfecto para tus necesidades.
             <br />
-            <span className="font-semibold text-[#FF69B4]">7 días gratis para probar sin compromiso</span>
+            <span className="font-semibold text-primary">7 días gratis para probar sin compromiso</span>
           </p>
         </motion.div>
 
@@ -88,20 +88,20 @@ export const Pricing = () => {
                     hover={true}
                     className={`text-center h-full flex flex-col ${
                       plan.popular
-                        ? "border-2 border-[#FF69B4] relative"
+                        ? "border-2 border-primary relative"
                         : ""
                     }`}
                   >
                     {plan.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                        <Badge variant="pink" className="bg-[#FF69B4] text-white px-4 py-1 text-xs font-semibold shadow-lg">
+                        <Badge variant="pink" className="bg-primary text-white px-4 py-1 text-xs font-semibold shadow-lg">
                           Más Popular
                         </Badge>
                       </div>
                     )}
-                    <h3 className="text-2xl font-bold text-[#1a1a2e] mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                     <div className="mb-4">
-                      <span className="text-4xl font-bold text-[#1a1a2e]">
+                      <span className="text-4xl font-bold text-gray-900">
                         {plan.priceLabel}
                       </span>
                       <span className="text-gray-600">/{plan.period}</span>
@@ -142,7 +142,7 @@ export const Pricing = () => {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={prevSlide}
-              className="p-2 rounded-full bg-white border-2 border-gray-300 hover:border-[#FF69B4] hover:bg-[#FF69B4] hover:text-white transition-colors focus:outline-none focus:ring-4 focus:ring-pink-300"
+              className="p-2 rounded-full bg-white border-2 border-gray-300 hover:border-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-4 focus:ring-blue-300"
               aria-label="Plan anterior"
             >
               <ChevronLeft className="h-6 w-6" />
@@ -156,7 +156,7 @@ export const Pricing = () => {
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
                     currentIndex === index
-                      ? "bg-[#FF69B4]"
+                      ? "bg-primary"
                       : "bg-gray-300 hover:bg-gray-400"
                   }`}
                   aria-label={`Ir al plan ${index + 1}`}
@@ -166,7 +166,7 @@ export const Pricing = () => {
 
             <button
               onClick={nextSlide}
-              className="p-2 rounded-full bg-white border-2 border-gray-300 hover:border-[#FF69B4] hover:bg-[#FF69B4] hover:text-white transition-colors focus:outline-none focus:ring-4 focus:ring-pink-300"
+              className="p-2 rounded-full bg-white border-2 border-gray-300 hover:border-primary hover:bg-primary hover:text-white transition-colors focus:outline-none focus:ring-4 focus:ring-blue-300"
               aria-label="Siguiente plan"
             >
               <ChevronRight className="h-6 w-6" />

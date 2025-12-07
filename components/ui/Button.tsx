@@ -28,11 +28,11 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        "bg-[#FF69B4] hover:bg-[#FF1493] text-white shadow-[0_4px_15px_rgba(255,105,180,0.3)] hover:shadow-[0_6px_20px_rgba(255,105,180,0.4)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-pink-300",
+        "bg-primary hover:bg-primary-dark text-white shadow-[0_4px_15px_rgba(37,99,235,0.3)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-blue-300",
       secondary:
-        "bg-[#FFD700] hover:bg-[#FFC700] text-white shadow-[0_4px_15px_rgba(255,215,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,215,0,0.4)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-yellow-300",
+        "bg-secondary hover:bg-secondary-dark text-white shadow-[0_4px_15px_rgba(5,150,105,0.3)] hover:shadow-[0_6px_20px_rgba(5,150,105,0.4)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-green-300",
       outline:
-        "border-2 border-[#1a1a2e] text-[#1a1a2e] bg-transparent hover:bg-[#1a1a2e] hover:text-white hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-gray-300",
+        "border-2 border-gray-900 text-gray-900 bg-transparent hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-gray-300",
     };
 
     const sizes = {

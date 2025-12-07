@@ -36,7 +36,7 @@ export const Hero = () => {
         >
           <path
             d="M0,60 Q360,0 720,60 T1440,60"
-            stroke="#FF69B4"
+            stroke="#2563eb"
             strokeWidth="3"
             fill="none"
           />
@@ -52,10 +52,10 @@ export const Hero = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <Badge variant="orange" className="mb-6 bg-[#FFB6C1] text-[#FF1493]">
+            <Badge variant="orange" className="mb-6 bg-orange-100 text-warning">
               🐾 7 días gratis • Sin tarjeta de crédito
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a2e] mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Para Tu{" "}
               <span className="block">Mejor Amigo</span>
             </h1>

@@ -9,18 +9,44 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        petzen: {
-          "dark-blue": "#1a1a2e",
-          "dark-blue-alt": "#2d3748",
-          pink: "#FF69B4",
-          "pink-dark": "#FF1493",
-          "pink-light": "#FFB6C1",
-          orange: "#FF6B35",
-          "orange-light": "#FFA07A",
-          yellow: "#FFD700",
-          "yellow-light": "#FFF8DC",
-          beige: "#F5F5DC",
-          "beige-light": "#FFFEF0",
+        // Colores del sistema veterinario
+        primary: {
+          DEFAULT: "#059669", // Green 600
+          dark: "#047857", // Green 700
+        },
+        secondary: {
+          DEFAULT: "#2563eb", // Blue 600
+          dark: "#1d4ed8", // Blue 700
+        },
+        accent: {
+          DEFAULT: "#dc2626", // Red 600
+        },
+        warning: {
+          DEFAULT: "#d97706", // Orange 600
+        },
+        gray: {
+          50: "#f9fafb",
+          100: "#f3f4f6",
+          200: "#e5e7eb",
+          300: "#d1d5db",
+          400: "#9ca3af",
+          500: "#6b7280",
+          600: "#4b5563",
+          700: "#374151",
+          800: "#1f2937",
+          900: "#111827",
+        },
+        // Colores de estado
+        success: "#059669",
+        error: "#dc2626",
+        info: "#2563eb",
+        // Backgrounds y text
+        background: "#f9fafb",
+        surface: "#ffffff",
+        text: {
+          primary: "#111827",
+          secondary: "#6b7280",
+          light: "#9ca3af",
         },
       },
       fontFamily: {

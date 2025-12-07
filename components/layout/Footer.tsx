@@ -66,11 +66,11 @@ export const Footer = () => {
           <div>
             <Link
               href="/"
-              className="flex items-center space-x-2 mb-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg w-fit"
+              className="flex items-center space-x-2 mb-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 rounded-lg w-fit"
               aria-label="Ir a inicio"
             >
               <Heart
-                className="h-6 w-6 text-[#FF69B4] fill-[#FF69B4]"
+                className="h-6 w-6 text-primary fill-primary"
                 aria-hidden="true"
               />
               <span className="text-xl font-bold text-gray-600">
@@ -80,7 +80,7 @@ export const Footer = () => {
             <p className="text-sm text-gray-500">{SITE_CONFIG.tagline}</p>
             <a
               href={`mailto:${SITE_CONFIG.email}`}
-              className="flex items-center gap-2 mt-4 text-sm text-gray-500 hover:text-[#FF69B4] transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg w-fit"
+              className="flex items-center gap-2 mt-4 text-sm text-gray-500 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 rounded-lg w-fit"
               aria-label={`Enviar correo a ${SITE_CONFIG.email}`}
             >
               <Mail className="h-4 w-4" aria-hidden="true" />
@@ -103,7 +103,7 @@ export const Footer = () => {
                     }}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="hover:text-[#FF69B4] transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg px-2 py-1 -ml-2"
+                    className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 rounded-lg px-2 py-1 -ml-2"
                   >
                     {link.label}
                   </a>
@@ -121,7 +121,7 @@ export const Footer = () => {
                   <a
                     href={link.href}
                     onClick={(e) => handleLinkClick(e, link.href)}
-                    className="hover:text-[#FF69B4] transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg px-2 py-1 -ml-2"
+                    className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 rounded-lg px-2 py-1 -ml-2"
                   >
                     {link.label}
                   </a>
@@ -138,7 +138,7 @@ export const Footer = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="hover:text-[#FF69B4] transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg px-2 py-1 -ml-2"
+                    className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 rounded-lg px-2 py-1 -ml-2"
                   >
                     {link.label}
                   </a>

@@ -20,7 +20,7 @@ export const CTA = () => {
         >
           <path
             d="M0,60 Q360,120 720,60 T1440,60"
-            stroke="#FF69B4"
+            stroke="#2563eb"
             strokeWidth="3"
             fill="none"
           />
@@ -50,7 +50,7 @@ export const CTA = () => {
               <Button
                 variant="primary"
                 size="lg"
-                className="bg-[#FF69B4] hover:bg-[#FF1493]"
+                className="bg-[#2563eb] hover:bg-[#1d4ed8]"
               >
                 Comenzar Gratis - 7 Días
               </Button>

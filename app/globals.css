@@ -6,21 +6,41 @@
 
 @layer base {
   :root {
-    /* Colores estilo Petzen basados en las imágenes */
-    --petzen-dark-blue: #1a1a2e;
-    --petzen-dark-blue-alt: #2d3748;
-    --petzen-pink: #FF69B4;
-    --petzen-pink-dark: #FF1493;
-    --petzen-pink-light: #FFB6C1;
-    --petzen-orange: #FF6B35;
-    --petzen-orange-light: #FFA07A;
-    --petzen-yellow: #FFD700;
-    --petzen-yellow-light: #FFF8DC;
-    --petzen-beige: #F5F5DC;
-    --petzen-beige-light: #FFFEF0;
+    /* Colores del sistema veterinario */
+    --primary: #2563eb; /* Blue 600 */
+    --primary-dark: #1d4ed8; /* Blue 700 */
+    --secondary: #059669; /* Green 600 */
+    --accent: #dc2626; /* Red 600 */
+    --warning: #d97706; /* Orange 600 */
     
-    --background: #ffffff;
-    --foreground: #1a1a2e;
+    /* Grays */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    /* Backgrounds */
+    --background: #f9fafb;
+    --surface: #ffffff;
+    
+    /* Text */
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    
+    /* Status */
+    --success: #059669;
+    --error: #dc2626;
+    --info: #2563eb;
+    
+    /* Foreground (para compatibilidad) */
+    --foreground: #111827;
   }
 
   * {
@@ -45,7 +65,7 @@
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--petzen-pink);
+  background: var(--primary);
   color: white;
   padding: 8px 16px;
   text-decoration: none;
@@ -59,7 +79,7 @@
 
 /* Focus visible styles for accessibility */
 *:focus-visible {
-  outline: 3px solid var(--petzen-pink);
+  outline: 3px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -76,21 +96,21 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0,5 Q25,0 50,5 T100,5' stroke='%23FF69B4' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat-x;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0,5 Q25,0 50,5 T100,5' stroke='%232563eb' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat-x;
   background-size: 100px 10px;
 }
 
 @layer components {
-  /* Botones estilo Petzen - Rosa sólido */
+  /* Botones - Azul primario del sistema veterinario */
   .btn-petzen-primary {
-    background: var(--petzen-pink);
+    background: var(--primary);
     color: white;
     font-weight: 600;
     padding: 1rem 2rem;
     border-radius: 12px;
     transition: all 0.3s ease;
     transform: scale(1);
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     border: none;
     cursor: pointer;
     display: inline-flex;
@@ -103,9 +123,9 @@
   }
 
   .btn-petzen-primary:hover {
-    background: var(--petzen-pink-dark);
+    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
   }
 
   .btn-petzen-primary:active {
@@ -113,14 +133,14 @@
   }
 
   .btn-petzen-secondary {
-    background: var(--petzen-yellow);
+    background: var(--secondary);
     color: white;
     font-weight: 600;
     padding: 1rem 2rem;
     border-radius: 12px;
     transition: all 0.3s ease;
     transform: scale(1);
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
     border: none;
     cursor: pointer;
     display: inline-flex;
@@ -133,14 +153,14 @@
   }
 
   .btn-petzen-secondary:hover {
-    background: #FFC700;
+    background: #047857;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
   }
 
   .btn-petzen-outline {
-    border: 2px solid var(--petzen-dark-blue);
-    color: var(--petzen-dark-blue);
+    border: 2px solid var(--primary);
+    color: var(--primary);
     background: transparent;
     font-weight: 600;
     padding: 1rem 2rem;
@@ -155,7 +175,7 @@
   }
 
   .btn-petzen-outline:hover {
-    background: var(--petzen-dark-blue);
+    background: var(--primary);
     color: white;
     transform: translateY(-2px);
   }
@@ -175,25 +195,25 @@
     transform: translateY(-5px);
   }
 
-  /* Badge estilo Petzen */
+  /* Badge */
   .badge-petzen {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
     border-radius: 9999px;
-    background: var(--petzen-pink-light);
-    color: var(--petzen-pink-dark);
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-dark);
     font-weight: 500;
     font-size: 0.875rem;
   }
 
-  /* Títulos estilo Petzen */
+  /* Títulos */
   .heading-petzen {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: var(--petzen-dark-blue);
+    color: var(--text-primary);
   }
 
   @media (min-width: 768px) {
@@ -223,10 +243,10 @@
     width: 100%;
     height: 8px;
     background-image: 
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 8'%3E%3Cpath d='M0,4 Q12.5,1 25,4 T50,4' stroke='%23FF69B4' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 8'%3E%3Cpath d='M0,4 Q7.5,1 15,4 T30,4' stroke='%23FF69B4' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 8'%3E%3Cpath d='M0,4 Q15,1 30,4 T60,4' stroke='%23FF69B4' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 8'%3E%3Cpath d='M0,4 Q11.25,1 22.5,4 T45,4' stroke='%23FF69B4' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 8'%3E%3Cpath d='M0,4 Q12.5,1 25,4 T50,4' stroke='%232563eb' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 8'%3E%3Cpath d='M0,4 Q7.5,1 15,4 T30,4' stroke='%232563eb' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 8'%3E%3Cpath d='M0,4 Q15,1 30,4 T60,4' stroke='%232563eb' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 8'%3E%3Cpath d='M0,4 Q11.25,1 22.5,4 T45,4' stroke='%232563eb' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: 
       2% 50%,
@@ -240,17 +260,17 @@
       45px 8px;
   }
 
-  /* Header superior oscuro */
+  /* Header superior */
   .top-header {
-    background: var(--petzen-dark-blue);
+    background: var(--gray-900);
     color: white;
     padding: 0.5rem 0;
     font-size: 0.875rem;
   }
 
-  /* Fondo beige claro */
+  /* Fondo claro */
   .bg-petzen-beige {
-    background: var(--petzen-beige-light);
+    background: var(--background);
   }
 
   /* Forma orgánica/blob para imágenes */
@@ -259,9 +279,9 @@
     overflow: hidden;
   }
 
-  /* Texto con gradiente rosa */
+  /* Texto con gradiente azul */
   .text-petzen-gradient {
-    background: linear-gradient(to right, var(--petzen-pink), var(--petzen-pink-dark));
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -269,6 +289,6 @@
 
   /* Fondo hero con gradiente suave */
   .bg-petzen-hero {
-    background: linear-gradient(to bottom, white, var(--petzen-beige-light));
+    background: linear-gradient(to bottom, white, var(--background));
   }
 }

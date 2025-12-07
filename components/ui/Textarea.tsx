@@ -24,7 +24,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           >
             {label}
             {props.required && (
-              <span className="text-[#FF69B4] ml-1" aria-label="requerido">
+              <span className="text-primary ml-1" aria-label="requerido">
                 *
               </span>
             )}
@@ -34,7 +34,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           ref={ref}
           id={textareaId}
           className={cn(
-            "w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-[#1a1a2e] transition-all duration-200 focus:border-[#FF69B4] focus:ring-4 focus:ring-pink-100 focus:outline-none resize-vertical min-h-[120px]",
+            "w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-gray-900 transition-all duration-200 focus:border-primary focus:ring-4 focus:ring-blue-100 focus:outline-none resize-vertical min-h-[120px]",
             error && "border-red-500 focus:border-red-500 focus:ring-red-100",
             className
           )}

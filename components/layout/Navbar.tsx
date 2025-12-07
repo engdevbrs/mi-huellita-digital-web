@@ -42,12 +42,12 @@ export const Navbar = () => {
   return (
     <>
       {/* Top Header Bar - Estilo Petzen */}
-      <div className="bg-[#1a1a2e] text-white py-2 text-sm">
+      <div className="bg-gray-900 text-white py-2 text-sm">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <span>Bienvenido a Mi Huellita Digital!</span>
           <a
             href="mailto:contacto@mihuellitadigital.cl"
-            className="flex items-center gap-2 hover:text-[#FF69B4] transition-colors"
+            className="flex items-center gap-2 hover:text-primary transition-colors"
           >
             <span>📧</span>
             <span>contacto@mihuellitadigital.cl</span>
@@ -74,8 +74,8 @@ export const Navbar = () => {
               className="flex items-center space-x-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg"
               aria-label="Ir a inicio"
             >
-              <Heart className="h-8 w-8 text-[#FF69B4] fill-[#FF69B4]" aria-hidden="true" />
-              <span className="text-2xl font-bold text-[#1a1a2e]">Mi Huellita Digital</span>
+              <Heart className="h-8 w-8 text-primary fill-primary" aria-hidden="true" />
+              <span className="text-2xl font-bold text-gray-900">Mi Huellita Digital</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -85,9 +85,9 @@ export const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  className="text-[#1a1a2e] hover:text-[#FF69B4] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg px-2 py-1 font-medium uppercase text-sm flex items-center gap-1"
+                  className="text-gray-900 hover:text-primary transition-colors duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 rounded-lg px-2 py-1 font-medium uppercase text-sm flex items-center gap-1"
                 >
-                  <span className="text-[#FF69B4]">+</span>
+                  <span className="text-primary">+</span>
                   {link.label}
                 </a>
               ))}
@@ -95,7 +95,7 @@ export const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-[#1a1a2e] hover:text-[#FF69B4] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg"
+              className="md:hidden p-2 text-gray-900 hover:text-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 rounded-lg"
               aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -120,10 +120,10 @@ export const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  className="block py-3 text-[#1a1a2e] hover:text-[#FF69B4] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 rounded-lg px-2 font-medium uppercase text-sm flex items-center gap-1"
+                  className="block py-3 text-gray-900 hover:text-primary transition-colors duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 rounded-lg px-2 font-medium uppercase text-sm flex items-center gap-1"
                   role="menuitem"
                 >
-                  <span className="text-[#FF69B4]">+</span>
+                  <span className="text-primary">+</span>
                   {link.label}
                 </a>
               ))}

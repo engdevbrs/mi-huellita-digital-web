@@ -28,7 +28,7 @@ export const FAQ = () => {
         >
           <h2
             id="faq-heading"
-            className="text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4 section-title inline-block"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 section-title inline-block"
           >
             Preguntas Frecuentes
           </h2>
@@ -55,12 +55,12 @@ export const FAQ = () => {
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${index}`}
                   >
-                    <span className="font-semibold text-[#1a1a2e] pr-4">
+                    <span className="font-semibold text-gray-900 pr-4">
                       {item.question}
                     </span>
                     {isOpen ? (
                       <ChevronUp
-                        className="h-5 w-5 text-[#FF69B4] flex-shrink-0"
+                        className="h-5 w-5 text-primary flex-shrink-0"
                         aria-hidden="true"
                       />
                     ) : (
